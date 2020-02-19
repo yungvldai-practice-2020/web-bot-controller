@@ -1,41 +1,43 @@
+import { stop, go, turn } from '@/services/mech';
+
 export default [
   {
     key: 'ArrowUp',
-    onPush: () => {
-      console.log('up')
+    onPush: (socket) => {
+      go(socket, 'forward');
     },
-    onPull: () => {
-      
+    onPull: (socket) => {
+      stop(socket);
     },
     id: 'up'
   },
   {
     key: 'ArrowRight',
-    onPush: () => {
-      console.log('right')
+    onPush: (socket) => {
+      turn(socket, 'right');
     },
-    onPull: () => {
-
+    onPull: (socket) => {
+      stop(socket);
     },
     id: 'right'
   },
   {
     key: 'ArrowLeft',
-    onPush: () => {
-      console.log('left')
+    onPush: (socket) => {
+      turn(socket, 'left');
     },
-    onPull: () => {
-
+    onPull: (socket) => {
+      stop(socket);
     },
     id: 'left'
   },
   {
     key: 'ArrowDown',
-    onPush: () => {
-      console.log('down')
+    onPush: (socket) => {
+      go(socket, 'rearward');
     },
-    onPull: () => {
-
+    onPull: (socket) => {
+      stop(socket);
     },
     id: 'down'
   }

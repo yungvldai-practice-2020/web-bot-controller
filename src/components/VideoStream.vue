@@ -20,9 +20,5 @@ export default {
 <style scoped lang="scss">
   .video-stream {
     margin: 10px;
-    .error {
-      color: red;
-      font-weight: bold;
-    }
   }
 </style>
