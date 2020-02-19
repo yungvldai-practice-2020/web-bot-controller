@@ -1,26 +1,42 @@
 export default [
   {
     key: 'ArrowUp',
-    action: () => {
+    onPush: () => {
       console.log('up')
-    }
+    },
+    onPull: () => {
+      
+    },
+    id: 'up'
   },
   {
     key: 'ArrowRight',
-    action: () => {
+    onPush: () => {
       console.log('right')
-    }
+    },
+    onPull: () => {
+
+    },
+    id: 'right'
   },
   {
     key: 'ArrowLeft',
-    action: () => {
+    onPush: () => {
       console.log('left')
-    }
+    },
+    onPull: () => {
+
+    },
+    id: 'left'
   },
   {
     key: 'ArrowDown',
-    action: () => {
+    onPush: () => {
       console.log('down')
-    }
+    },
+    onPull: () => {
+
+    },
+    id: 'down'
   }
 ];

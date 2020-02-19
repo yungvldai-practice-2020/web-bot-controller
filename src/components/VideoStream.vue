@@ -1,18 +1,28 @@
 <template>
   <div class="video-stream">
-    <iframe src="http://localhost:5000/video_feed" width="640" height="480">
-    </iframe>
+    <img 
+      v-if="!haveError"
+      class="stream" src="http://localhost:5000/video_feed" 
+      @error="haveError = true"
+    />
+    <span class="error" v-else>Cannot connect to stream. Sorry!</span>
   </div>
 </template>
 
 <script>
 export default {
-
+  data: () => ({
+    haveError: false
+  })
 }
 </script>
 
 <style scoped lang="scss">
   .video-stream {
-
+    margin: 10px;
+    .error {
+      color: red;
+      font-weight: bold;
+    }
   }
 </style>
