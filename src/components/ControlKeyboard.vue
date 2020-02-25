@@ -64,6 +64,7 @@ export default {
 <style scoped lang="scss">
   .control-keyboard {
     position: relative;
+    margin: 10px;
     .keyboard-on-connected {
       display: flex;
       align-items: center;
